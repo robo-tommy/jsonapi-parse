@@ -2,18 +2,14 @@
     "name": "jsonapi-parse",
     "version": "1.0.0",
     "description": "Parses JSON API style responses into a more 'typical' JSON format",
-    "main": "./dist/jsonapi.min.js",
+    "main": "./es/jsonapi.js",
     "dependencies": {},
     "devDependencies": {
-        "gulp": "^3.9.0",
-        "gulp-rename": "^1.2.2",
-        "gulp-uglify": "^1.4.0",
-        "mocha": "^2.3.0"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/mysidewalk/jsonapi-parse.git"
+        "url": "https://github.com/robo-tommy/jsonapi-parse.git"
     },
     "license": "MIT",
-    "homepage": "https://github.com/mysidewalk/jsonapi-parse"
+    "homepage": "https://github.com/robo-tommy/jsonapi-parse"
 }
