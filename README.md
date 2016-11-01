@@ -1,10 +1,11 @@
 # JSONAPI Parse
 
+ES6 rewrite of https://github.com/mysidewalk/jsonapi-parse for myself.
+
 This library is currently complies and works with [JSON API v1.0](http://jsonapi.org/format/).
 
 ## Install
-`bower install jsonapi-parse`
-`npm install jsonapi-parse`
+`npm install robo-tommy/jsonapi-parse`
 
 ## API Reference
 
@@ -13,7 +14,7 @@ This library is currently complies and works with [JSON API v1.0](http://jsonapi
 | ------ | ---------------------------------- | ----------- |
 | input  | A JSON string or JavaScript object | `undefined` |
 
-Parses the input provided if it follows the JSON API specification (v1.0). This library currently creates a new object for every nested resource object rather than pointing to the reference of the object form the `included` collection. This is in an effort to reduce difficult to trace bugs. 
+Parses the input provided if it follows the JSON API specification (v1.0). This library currently creates a new object for every nested resource object rather than pointing to the reference of the object form the `included` collection. This is in an effort to reduce difficult to trace bugs.
 
 Currently it prevents circular references by keeping track of the "lineage" as it populates every new resource objects relationships. It will not set anything besides `type` and `id` for the related object.
 
@@ -24,7 +25,7 @@ Passing anything that is not a JSON string or JavaScript object will be returned
 **Example Usage**
 ``` javascript
 // JSON API structured object
-var input = {
+const input = {
         data: [
             {
                 id: '12klj',
@@ -37,15 +38,16 @@ var input = {
     stringified = JSON.stringify(input);
 
 // Parsing a normal Javascript Object
-window.jsonapi.parse(input);
+import {jsonapi} from 'jsonapi-parser';
+jsonapi.parse(input);
 
 
 // Parsing a JSON string
-window.jsonapi.parse(stringified);
+jsonapi.parse(stringified);
 
 // Returns
 // {
-//     data: [ 
+//     data: [
 //         { id: '12klj', key: 'value', property: true }
 //     ],
 //     jsonapi: { parsed: true }
@@ -53,12 +55,3 @@ window.jsonapi.parse(stringified);
 
 ```
 
-## Build
-`gulp build`
-
-This task currently concatenates, compresses (uglify), and moves the source files into the dist directory.
-
-## TODO
-- Add tests for the output of the parse method
-- Setup Travis CI for running the tests
-- Add npm package for parsing with Node
