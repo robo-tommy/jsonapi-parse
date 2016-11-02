@@ -38,7 +38,7 @@ const input = {
     stringified = JSON.stringify(input);
 
 // Parsing a normal Javascript Object
-import {jsonapi} from 'jsonapi-parser';
+import {jsonapi} from 'jsonapi-parse';
 jsonapi.parse(input);
 
 
