@@ -1,6 +1,26 @@
-# External Dependencies
-bower_components/*
-node_modules/*
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# node-waf configuration
+.lock-wscript
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Vim
+*.sw*
+
+#dist
+.DS_Store
+.nvmrc
 
 # Sublime Text
 *.sublime-project
