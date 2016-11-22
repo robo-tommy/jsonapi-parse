@@ -1,6 +1,6 @@
 # JSONAPI Parse
 
-ES6 rewrite of https://github.com/mysidewalk/jsonapi-parse for myself.
+ES2015 (ES6) module rewrite of https://github.com/mysidewalk/jsonapi-parse for myself.
 
 This library is currently complies and works with [JSON API v1.0](http://jsonapi.org/format/).
 
@@ -24,6 +24,9 @@ Passing anything that is not a JSON string or JavaScript object will be returned
 
 **Example Usage**
 ``` javascript
+
+import {jsonapi} from 'jsonapi-parse';
+
 // JSON API structured object
 const input = {
         data: [
@@ -38,7 +41,6 @@ const input = {
     stringified = JSON.stringify(input);
 
 // Parsing a normal Javascript Object
-import {jsonapi} from 'jsonapi-parse';
 jsonapi.parse(input);
 
 
