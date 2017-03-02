@@ -25,7 +25,7 @@ Passing anything that is not a JSON string or JavaScript object will be returned
 **Example Usage**
 ``` javascript
 
-import {jsonapi} from 'jsonapi-parse';
+import jsonapi from 'jsonapi-parse';
 
 // JSON API structured object
 const input = {
